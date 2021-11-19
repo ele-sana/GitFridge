@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from django.urls.conf import re_path
 from FridgeApp import views
+from FridgeApp import models
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^$', views.HelloWorld)
+
 ]   
