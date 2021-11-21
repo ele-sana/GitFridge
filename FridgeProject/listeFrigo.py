@@ -80,5 +80,7 @@ origan = Aliments(name="Origan")
 origan.save()
 muscade= Aliments(name="Muscade")
 muscade.save()
-= Aliments(name="")
-.save()
+orange = Aliments(name="Orange")
+orange.save()
+
+
