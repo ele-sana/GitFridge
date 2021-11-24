@@ -28,11 +28,9 @@ hachisParmentier.save()
 
 
 # les photos
-pateCarbonara = Recettes.objects.get(name'=Pâtes carbonara")
-pateCarbonara.picture("https://static.750g.com/images/1200-630/f6ad72f2ac5f330143bd9bc27566dee6/comment-realiser-des-pates-carbonara-comme-en-italie.jpg")
-pateCarbonara.save()
+
 chiconGratin= Recettes.objects.get(name ="Chicon aux gratin")
-chiconGratin.picture("https://www.delhaize.lu/fr/file/17185.recipes-single/ab1b17658717113d6691351550c56847/358aef34bc1b421c88e18babebe182c0.jpg")
+chiconGratin.picture="https://www.delhaize.lu/fr/file/17185.recipes-single/ab1b17658717113d6691351550c56847/358aef34bc1b421c88e18babebe182c0.jpg"
 chiconGratin.save()
 gratinDePateAuJambon = Recettes.objects.get(name ="Gratin de pâtes au jambon")
 gratinDePateAuJambon.picture("https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Ffac.2F2018.2F07.2F30.2F1ab55c0f-e57d-45ca-96ee-d8028fe5f161.2Ejpeg/850x478/quality/90/crop-from/center/gratin-de-pates-au-jambon.jpeg")
