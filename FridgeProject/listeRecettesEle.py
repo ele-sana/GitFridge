@@ -106,3 +106,10 @@ tomatesFarcies.save()
 hachisParmentier = Recettes.objects.get(name ="Hachis Parmentier")
 hachisParmentier.howToCook="https://www.marmiton.org/recettes/recette_hachis-parmentier_17639.aspx"
 hachisParmentier.save()
+
+k# liens recettes et aliments
+pateCarbonara= Recettes.objects.get(name= "Pâtes carbonara")
+pateCarbonara.aliments.add(pates,oeuf,lardons,parmesanrapa)
+pateCarbonara.save()
+
+

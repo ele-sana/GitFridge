@@ -106,3 +106,12 @@ tomatesFarcies.save()
 hachisParmentier = Recettes.objects.get(name ="Hachis Parmentier")
 hachisParmentier.howTocook("https://www.marmiton.org/recettes/recette_hachis-parmentier_17639.aspx")
 hachisParmentier.save()
+
+
+
+
+google = Recettes(name="Google")
+google.save()
+google = Recettes.objects.get(name ="Google")
+google.howTocook("https://www.google.be/")
+google.save()
