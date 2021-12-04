@@ -1,0 +1,43 @@
+<!-- Etape 1 : Mettre le preset HTML5 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours1</title>
+    <!-- Etape 2 link la stylesheet -->
+    <!-- <link rel="stylesheet" href="CSS/style.css"> -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'MyFirstApp/style.css' %}">
+</head>
+
+<body>
+    <a href=" {% url 'Index' %}  " style = "text-decoration:none;">
+    <header>
+        <h1>Le Frigo intelligent d'Eléonar et Alain</h1>
+        <h4 class="Subtitle">Bienvenue dans le  frigo d'Eléonor et Alain. <br> Vous allez pouvoir concocter votre repas en fonction des aliments de votre  frigo.<br> Vous pourrez égalemnet vous inspirer par nos recettes sur le site</h4>
+    </header>
+</a>
+
+    <div class ="NavBar">
+        <ul>
+            <li><a href="{% url 'FridgeApp:Recettes' %} ">Toutes nos recettes</a></li>
+            <li><a href=" ">A propos</a></li>
+        </ul>
+    </div>
+    <div class="Odd">
+        {% block contain %}
+        {% endblock %}  
+
+        </div>
+</body>
+
+<footer>
+    <h1>Footer frigo</h1>
+    <h4 class="Subtitle">Frigo tout droits cuisinés</h4>
+</footer>
+</body>
+
+</html>

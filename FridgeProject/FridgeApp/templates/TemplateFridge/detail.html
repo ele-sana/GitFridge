@@ -1,0 +1,28 @@
+{% extends 'MyFirstApp/base.html' %}
+
+{% block contain %}
+<hr>
+<h1 style="text-align: center;">{{ serieTitle }}</h1>
+<img src="{{ thumbnail }}" alt="{{ SerieTitle }}" width="576px" height="324px">
+  <div style="margin-bottom:45px">
+    <h2 style="text-align: center;">Createurs</h2>
+    <p>{{ creatorsName }}</p>
+  </div>
+
+  <h2 style="text-align: center;">Réserver {{ serieTitle }}</h2>
+  <p style="margin-bottom: 20px;">Demandez-nous de mettre de côté {{ serieTitle }} et venez le chercher dès demain en magasin ! </p>
+  <form action="/" method="post">
+
+
+      <label for="name" class="control-label">Nom</label>
+      <input type="text" name="name" value="" id="name">
+      <label for="email" class="control-label">E-mail</label>
+      <input type="text" name="email" value="" id="email">
+    <!-- <input type="hidden" class="hidden" value="" name="SerieId"> -->
+
+    <button type="submit">Réserver</button>
+  </form>
+
+
+
+{% endblock %}

@@ -22,7 +22,7 @@ from FridgeApp import models
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^FridgeApp/',include('FridgeApp.urls')),
-    re_path(r'^$', views.Welcome),
+    re_path(r'^$', views.FooDListing),
 
 
 ]   

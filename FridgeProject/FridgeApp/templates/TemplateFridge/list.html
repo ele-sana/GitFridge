@@ -1,0 +1,35 @@
+<h2 style="text-align: center;">{{ listTitle }}</h2>
+{% include 'MyFirstApp/searchForm.html' %}
+
+{% if recettes|length_is:"0" %}
+    <div style="text-align: center;"> Nous n'avons trouvé aucun résultat pour votre recherche, essayez un autre mot clef, vous aurez plus de chance peut-être !
+    </div>
+
+
+{% else %}
+
+
+    {% for recette in recettes %}
+        <div class="SeriePresentation">
+            <a href="{% url 'Fridgeapp:RecettesListing' recettes.id %}">
+                <img class="SerieImage" src="{{ recettes.picture }}" alt="image de {{ recettes.name }}" width="576px" height="324px">
+            </a>
+            <h3><a href="{% url 'FridgeApp:RecettesListing' recettes.id %}">{{ recettes.name }}</a></h3>
+            {% for aliment in recettes.aliments.all %}
+                <p>{{ aliment.name }}</p>
+            {% endfor %}
+        </div>    
+
+    {% endfor %}
+    <nav aria-label="pagination ">
+        <ul style="list-style-type: none;">
+            {% if recettes.has_previous %}
+            <li><a href="?page={{ recettes.previous_page_number }}" style="text-decoration: none ; ">précédent</a></li>
+            {% endif %}
+            {% if recettes.has_next %}
+            <li><a href="?page={{ recettes.next_page_number }}" style="text-decoration: none ; ">suivant</a></li>
+            {% endif %}
+        </ul>
+
+    </nav>
+{% endif %}

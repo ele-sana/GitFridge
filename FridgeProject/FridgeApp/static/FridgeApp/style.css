@@ -1,0 +1,107 @@
+body {
+    text-align: center;
+    background-color: #fffff4;
+    color: #fec14d;
+    font-weight: bold;
+}
+
+.NavBar>ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+background-color: #21193f;
+overflow: hidden;
+}
+.NavBar>ul>li{
+    float: left;
+}
+.NavBar>ul>li>a{
+display: block;
+color: #fec14d;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+
+}
+.NavBar>ul>li>a:hover{
+    background-color: #fec14d;
+    color: #21193f;
+}
+header {
+    border-radius: 100px;
+    border-width: 15px;
+    border-color: #21193f;
+    margin-bottom: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-style: double none solid;
+}
+
+footer {
+    border-radius: 100px;
+    border-width: 15px;
+    border-color: #21193f;
+    margin-bottom: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-style: solid none double;
+}
+
+.Subtitle {
+    color: #21193f;
+}
+
+header:hover {
+    border-color: #fec14d;
+    background-color: #21193f;
+    color: #fec14d;
+}
+
+footer:hover {
+    border-color: #fec14d;
+    background-color: #21193f;
+    color: #fec14d;
+}
+
+header:hover>.Subtitle {
+    color: #fec14d;
+}
+footer:hover>.Subtitle {
+    color: #fec14d;
+}
+
+div {
+    margin: 20px;
+    padding-bottom: 20px;
+}
+
+.Odd {
+    background-color: #21193f;
+    color: #fec14d;
+    border: solid;
+    border-radius: 30px;
+    border-color: #fffff4;
+    border-style: double none double;
+    margin-right: 100px;
+    margin-left: 100px;
+    transition: 0.5s ease-in;
+}
+
+.Pair {
+    background-color: #fffff4;
+    color: #21193f;
+    border: solid;
+    border-radius: 30px;
+    border-color: #21193f;
+    border-style: double none double;
+    margin-right: 100px;
+    margin-left: 100px;
+    transition: 0.5s ease-in;
+}
+
+.Odd:hover,
+.Pair:hover {
+    font-size: 40px;
+    padding: 200px;
+    transition: 0.3s ease-out;
+}
