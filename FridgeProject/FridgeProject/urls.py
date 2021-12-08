@@ -21,7 +21,7 @@ from FridgeApp import models
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'^FridgeApp/',include('FridgeApp.urls')),
+    re_path(r'^FridgeApp/',include('FridgeApp.urls',namespace="FridgeApp"),name="FridgeApp"),
     re_path(r'^$', views.FooDListing),
 
 

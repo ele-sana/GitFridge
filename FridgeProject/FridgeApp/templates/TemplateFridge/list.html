@@ -1,5 +1,5 @@
 <h2 style="text-align: center;">{{ listTitle }}</h2>
-{% include 'MyFirstApp/searchForm.html' %}
+{% include 'TemplateFridge/searchForm.html' %}
 
 {% if recettes|length_is:"0" %}
     <div style="text-align: center;"> Nous n'avons trouvé aucun résultat pour votre recherche, essayez un autre mot clef, vous aurez plus de chance peut-être !
@@ -11,10 +11,10 @@
 
     {% for recette in recettes %}
         <div class="SeriePresentation">
-            <a href="{% url 'Fridgeapp:RecettesListing' recettes.id %}">
-                <img class="SerieImage" src="{{ recettes.picture }}" alt="image de {{ recettes.name }}" width="576px" height="324px">
+            <a href="{% url 'FridgeApp:RecettesListing' %}">
+                <img class="SerieImage" src="{{ recette.picture }}" alt="image de {{ recette.name }}" width="576px" height="324px">
             </a>
-            <h3><a href="{% url 'FridgeApp:RecettesListing' recettes.id %}">{{ recettes.name }}</a></h3>
+            <h3><a href="{% url 'FridgeApp:RecettesListing'  %}">{{ recettes.name }}</a></h3>
             {% for aliment in recettes.aliments.all %}
                 <p>{{ aliment.name }}</p>
             {% endfor %}
