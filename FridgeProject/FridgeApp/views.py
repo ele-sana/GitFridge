@@ -14,7 +14,7 @@ def FooDListing(request):
     return render(request,'TemplateFridge/index.html',context)
 
 def RecettesListing(request):
-    recettes = Recettes.objects.all().order_by("-name")[:3]
+    recettes = Recettes.objects.all().order_by("-name")
     # template = loader.get_template("TemplateFridge/index.html")
     # formatedRecettes = ["<ul><li style='text-align:center' type='check-box'>{}</li></ul>".format(recette.name) for recette in recettes]
     context = {'recettes': recettes}

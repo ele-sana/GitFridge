@@ -8,19 +8,16 @@
 
 {% else %}
 
-
-    {% for recette in recettes %}
+{% for recette in recettes %}
         <div class="SeriePresentation">
             <a href="{% url 'FridgeApp:RecettesListing' %}">
-                <img class="SerieImage" src="{{ recette.picture }}" alt="image de {{ recette.name }}" width="576px" height="324px">
-            </a>
-            <h3><a href="{% url 'FridgeApp:RecettesListing'  %}">{{ recettes.name }}</a></h3>
-            {% for aliment in recettes.aliments.all %}
-                <p>{{ aliment.name }}</p>
+                <img class="SerieImage" src="{{ recette.picture}}" alt="image de {{ recette.name }}" width="576px" height="324px"  >
+               </a>
+            <h3><a href="{% url 'FridgeApp:RecettesListing'  %}">{{ recette.name }}</a></h3>
+            
             {% endfor %}
         </div>    
 
-    {% endfor %}
     <nav aria-label="pagination ">
         <ul style="list-style-type: none;">
             {% if recettes.has_previous %}
@@ -33,3 +30,5 @@
 
     </nav>
 {% endif %}
+
+
