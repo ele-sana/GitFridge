@@ -7,7 +7,8 @@ from.import views
 app_name = "FridgeApp"
 urlpatterns = [
     re_path(r'^$',views.FooDListing,name="FooDListing"),
-    re_path(r'^Recettes/$',views.RecettesListing,name="RecettesListing"),
+    path(r'Recettes/',views.RecettesListing,name="RecettesListing"),
+    path('HowToCook/',views.HowToCook,name="HowToCook"),
 
 
 ] 

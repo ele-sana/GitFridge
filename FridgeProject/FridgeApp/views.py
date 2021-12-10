@@ -7,7 +7,7 @@ from django.template import loader
 
 
 def FooDListing(request):
-    aliments = Aliments.objects.all().order_by("-name")[:3]
+    aliments = Aliments.objects.all().order_by("name")
     # formatedAliments = ["<ul><li style='text-align:center' type='check-box'>{}</li></ul>".format(aliment.name) for aliment in aliments]
     # template = loader.get_template("TemplateFridge/index.html")
     context = {'aliments': aliments}
@@ -20,5 +20,8 @@ def RecettesListing(request):
     context = {'recettes': recettes}
     return render(request,'TemplateFridge/index.html',context)
     
-
+def HowToCook(request):
+    howToCook = Recettes.objects.all().order_by("-name")
+    context = {'howToCook': howToCook }
+    return render(request,'TemplateFridge/index.html',context)
 

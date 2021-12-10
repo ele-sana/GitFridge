@@ -12,8 +12,11 @@
         <div class="SeriePresentation">
             <a href="{% url 'FridgeApp:RecettesListing' %}">
                 <img class="SerieImage" src="{{ recette.picture}}" alt="image de {{ recette.name }}" width="576px" height="324px"  >
-               </a>
+               
+            </a>
             <h3><a href="{% url 'FridgeApp:RecettesListing'  %}">{{ recette.name }}</a></h3>
+            <h3><a href="{% url 'FridgeApp:RecettesListing'  %}" >{{ recette.howToCook }} </a></h3>
+
             
             {% endfor %}
         </div>    
@@ -32,3 +35,13 @@
 {% endif %}
 
 
+
+{% for aliment in aliments %}
+    <div class="SeriePresentation">
+       
+        
+        <h3><a href="{% url 'FridgeApp:FooDListing'  %}">{{ aliment.name }}</a></h3>
+    
+    </div>        
+    {% endfor %}
+    

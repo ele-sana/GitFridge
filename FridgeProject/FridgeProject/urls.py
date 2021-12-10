@@ -24,5 +24,7 @@ urlpatterns = [
     re_path(r'^FridgeApp/',include('FridgeApp.urls',namespace="FridgeApp"),name="FridgeApp"),
     re_path(r'^$', views.FooDListing),
 
+    
+
 
 ]   
