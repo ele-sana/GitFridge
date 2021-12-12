@@ -9,6 +9,7 @@ urlpatterns = [
     re_path(r'^$',views.FooDListing,name="FooDListing"),
     path(r'Recettes/',views.RecettesListing,name="RecettesListing"),
     path('HowToCook/',views.HowToCook,name="HowToCook"),
+    path('search/',views.Search,name="search"),
 
 
 ] 

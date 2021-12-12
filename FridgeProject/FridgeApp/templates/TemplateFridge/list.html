@@ -18,9 +18,9 @@
             <h3><a href="{% url 'FridgeApp:RecettesListing'  %}" >{{ recette.howToCook }} </a></h3>
 
             
-            {% endfor %}
+           
         </div>    
-
+ {% endfor %}
     <nav aria-label="pagination ">
         <ul style="list-style-type: none;">
             {% if recettes.has_previous %}
@@ -32,16 +32,7 @@
         </ul>
 
     </nav>
-{% endif %}
+    {% endif %}
 
 
-
-{% for aliment in aliments %}
-    <div class="SeriePresentation">
-       
-        
-        <h3><a href="{% url 'FridgeApp:FooDListing'  %}">{{ aliment.name }}</a></h3>
-    
-    </div>        
-    {% endfor %}
-    
+    <form action="/search" method="post">

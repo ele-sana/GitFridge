@@ -1,4 +1,5 @@
 from django.db import models
+from django import forms
 
 # Create your models here.
 class Aliments(models.Model):
@@ -17,4 +18,7 @@ class Recettes(models.Model):
     def __str__(self) -> str:
         return self.name
     
-        
+       
+class NameForm(forms.Form):
+    Choisissez = forms.CharField(label='Choisissez') 
+
