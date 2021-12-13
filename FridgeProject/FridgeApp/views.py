@@ -36,7 +36,8 @@ def Listing(request):
     except EmptyPage:
         recettes = paginator.page(paginator.num_pages)    
     context = {
-        'recettes':recettes
+        'recettes':recettes,
+        'paginate' : True
     }
     return render(request,'FridgeApp/listing.html',context)
 

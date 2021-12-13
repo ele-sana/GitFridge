@@ -10,12 +10,12 @@
 
 {% for recette in recettes %}
         <div class="SeriePresentation">
-            <a href="{% url 'FridgeApp:RecettesListing' %}">
+            <a href={{ recette.howToCook }}>
                 <img class="SerieImage" src="{{ recette.picture}}" alt="image de {{ recette.name }}" width="576px" height="324px"  >
                
             </a>
-            <h3><a href="{% url 'FridgeApp:RecettesListing'  %}">{{ recette.name }}</a></h3>
-            <h3><a href="{% url 'FridgeApp:RecettesListing'  %}" >{{ recette.howToCook }} </a></h3>
+            <h3><a href={{ recette.howToCook }}>{{ recette.name }} (clisuez ici pour trouver la recette)</a></h3>
+            <h3><a href={{ recette.howToCook }}>Visitez le lien vers la recette</a></h3>
 
             
            
