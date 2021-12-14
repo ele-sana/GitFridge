@@ -1,11 +1,11 @@
 <!-- <form action="" method="get" accept-charset="utf-8" > #/!\ REMPLIR LE PARAM ACTION !!! Avec votre future chemin (dans urls => name = "...") vers votre fonction de recherche -->
     {% for aliment in aliments %}
-
+    
     <label for="searchForm">
             </label>
+            
         <input type="checkbox" id="searchForm" name="query">
-        <a href="{% url 'FridgeApp:FooDListing'  %}">{{ aliment.name }} <br></a>
-        
+        <a>{{ aliment.name }} <br></a>
 </form>
 {% endfor %}
 <button aria-multiselectable="true">Recherchez la recette qui contient les aliments cochés</button>
