@@ -44,22 +44,32 @@ def Listing(request):
 
 
 def Search(request):
-    query = request.GET.get('query')
-    if not query:
-        aliments = Aliments.objects.all()
-    else:
-        aliments = Aliments.objects.filter(name__icontains = query)
-        if not aliments.exist():
-            aliments = Aliments.objects.get(recettes__name__icontains = query)
-    if not query:
-        name = "Ps de résultats pour cette recherche"
-    else:
-        name = "Résultats pour la recherche %s" %query
-    context = { 'aliments' : aliments,
-    'name': name
-    }
-    return render (request,'FridgeApp/search.html', context)
+    queries = request.GET.getlist('query')
+    receipts = Recettes.objects.all()
+    recettesQueJePeuxFaire =[]
+    name =""
+    for receipt in receipts :
+        alimentNbr = 0
+        for rAliment in receipt.aliments.all():
+            for query in queries :
+                if query == rAliment.name:
+                    alimentNbr+=1
+        name += receipt.name + " : " + str(alimentNbr) + "/" +  str(len(receipt.aliments.all()))       
+        if alimentNbr == len(receipt.aliments.all()):
+            recettesQueJePeuxFaire.append(receipt)
+            
 
+    query = ""
+    for q in queries:
+        query += q + ", "
+
+
+    # name = "Résultats pour la recherche %s" %query
+    context = { 
+     'recettes' : recettesQueJePeuxFaire,
+    'name': name 
+    }
+    return render (request,'TemplateFridge/search.html', context)
 
 
 
