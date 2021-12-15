@@ -1,0 +1,106 @@
+header{
+    width: 400px;
+    background-color:rosybrown;
+    color: seashell;
+    border: 3px solid royalblue;
+    margin-bottom: 20px;
+    border-radius: 39px;
+    transition: 1s ease all;
+}
+header:hover{
+    background:rgba(188, 143, 143, 0.3) ;
+    color: royalblue;
+    border:3px solid rgb(188, 143, 143);
+    transform: scale(1.2);
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: seashell;
+    color: rosybrown;
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer{
+    background-color:rosybrown;
+    color: seashell;
+    border-radius: 39px;
+    border: 3px solid royalblue;
+    transition: 0.4 ease all;
+}
+footer:hover{
+    background: rgba(188, 143, 143, 0.2);
+    color: royalblue;
+    border:3px solid rgb(188, 143, 143);
+    transform: scale(1.2);
+}
+button{
+    background-color: royalblue;
+    color: seashell;
+    border-radius: 39px;
+    transition: 0.3s ease all;
+    border:1ps solid rosybrown;
+}
+button:hover{
+    background-color: seashell;
+    color: rosybrown;
+}
+div{
+    background-color: rosybrown;
+    color: seashell;
+    width: 800px;
+    border-radius: 39px;
+    border: 1px solid royalblue;
+    margin-bottom: 20px;
+}
+
+img{
+    margin-top: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: 0.4s ease all;
+    border-radius: 20px;
+}
+img:hover{
+    transform: scale(1.3);
+}
+.NavBar{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-items: center;
+    width: 600px;
+    background: seashell;
+    border: none;
+    font-size: large;
+    
+}    
+
+.NavBar>ul>li{
+    border:1px solid rosybrown;
+    border-radius: 39px;
+    width: fit-content;
+    display: inline-block;
+    background: royalblue;
+    color: seashell;
+    transition: 0.4s ease all;
+}
+.NavBar>ul>li>a:hover{
+    background: seashell;
+    color: royalblue;
+    border: 1px solid rosybrown;
+    border-radius: 39px;
+}
+.NavBar>ul>li>a{
+    display: block;
+    color: seashell;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.4s ease all;
+ }
+.SeriePresentation{
+    border: none;
+}

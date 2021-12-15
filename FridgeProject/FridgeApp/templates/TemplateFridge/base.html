@@ -10,14 +10,14 @@
     <!-- Etape 2 link la stylesheet -->
     <!-- <link rel="stylesheet" href="CSS/style.css"> -->
     {% load static %}
-    <link rel="stylesheet" href="{% static 'FridgeApp/style.css' %}">
+    <link rel="stylesheet" href="{% static 'Fridgestyle/style.css'  %}">
 </head>
 
 <body>
     <a href=" {% url 'FridgeApp:FooDListing' %}  " style = "text-decoration:none;">
     <header>
-        <h1>Le Frigo intelligent d'Eléochat et Alinou</h1>
-        <h4 class="Subtitle">Bienvenue dans le  frigo d'Eléonor et Alain. <br> Vous allez pouvoir concocter votre repas en fonction des aliments de votre  frigo.<br> Vous pourrez égalemnet vous inspirer par nos recettes sur le site</h4>
+        <h1>P-EAT-HON</h1>
+        <h4 class="Subtitle">Le frigo est rempli (ou pas) et vous ne savez pas quoi faire avec vos ingrédients?<br>P-EAT-HON est fait pour vous!</h4>
     </header>
 </a>
 
@@ -25,7 +25,6 @@
         <ul>
             <li><a href="{% url 'FridgeApp:RecettesListing' %} ">Toutes nos recettes</a></li>
             <li><a href="{% url 'FridgeApp:FooDListing' %} ">Nos aliments proposés</a></li>
-            <li><a href="{% url 'FridgeApp:HowToCook' %} ">liens vers les recettes</a></li>
 
         </ul>
     </div>
@@ -37,8 +36,8 @@
 </body>
 
 <footer>
-    <h1>Footer frigo</h1>
-    <h4 class="Subtitle">Frigo tout droits cuisinés</h4>
+    <h1>P-EAT-HON</h1>
+    <h4 class="Subtitle">Travail de fin d'année 2021 d'Alain et Eleonor</h4>
 </footer>
 </body>
 

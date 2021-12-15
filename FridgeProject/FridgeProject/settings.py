@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'FridgeProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'FridgeDB',
+        'NAME': 'FridgDB',
         'USER' : 'root',
-        'PASSWORD': 'eleochat',
+        'PASSWORD': 'Eleochat',
         'HOST':'localhost',
         'PORT':'3306'
     }
