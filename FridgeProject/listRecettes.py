@@ -1,5 +1,7 @@
 from django.db.models.manager import RelatedManager
 
+from FridgeApp.models import Aliments
+
 
 pateCarbonara = Recettes(name="Pâtes carbonara")
 pateCarbonara.save()
@@ -139,6 +141,9 @@ ratatouille=Recettes.objects.get(name= "ratatouille provençale")
 ratatouille.picture="https://assets.afcdn.com/recipe/20180412/78543_w768h583c1cx2779cy1994cxb5558cyb3988.webpp"
 ratatouille.howToCook="https://www.marmiton.org/recettes/recette_ratatouille-provencale_80582.aspx"
 ratatouille.save()
+ratatouille.aliments.add
+ratatouille.save()
+
 
 chouDeBruxellesAuLardons=Recettes(name="Choux de Bruxelles aux lardons")
 chouDeBruxellesAuLardons.save()
@@ -181,3 +186,12 @@ FricasseePoulet=Recettes.objects.get(name="Fricassée de poulet au paprika et po
 FricasseePoulet.picture="https://assets.afcdn.com/recipe/20100120/44027_w768h583c1cx192cy256.webp"
 FricasseePoulet.howToCook="https://www.marmiton.org/recettes/recette_fricasse-de-poulet-au-paprika-et-poivrons_22552.aspx"
 FricasseePoulet.save()
+
+
+ratatouille=Recettes.objects.get(name= "ratatouille provençale")
+FricasseePoulet=Recettes.objects.get(name="Fricassée de poulet au paprika et poivrons")
+chouDeBruxellesAuLardons=Recettes.objects.get(name="Choux de Bruxelles aux lardons")
+pouletOrange=Recettes.objects.get(name="Poulet à l'orange")
+epinarCreme=Recettes.objects.get(name="Epinards crémeux")
+desDeNavetsBeurre=Recettes.objects.get(name="Dés de navets au beurre")
+gratinDeChouFleur=Recettes.objects.get(id=29)

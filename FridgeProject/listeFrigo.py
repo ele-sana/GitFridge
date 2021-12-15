@@ -55,3 +55,27 @@ ail= Aliments.objects.get(name="Ail")
 oignon = Aliments.objects.get(name="Oignons")
 echalote = Aliments.objects.get(name="Echalote")
 orange = Aliments.objects.get(name="Orange")
+vermouth=Aliments.objects.get(name="Verliytg
+tomate = Aliments.objects.ger(name="Tomate"
+sel= Aliments.objects.get(name="Sel")
+poivre=Aliments.objects.get(name="Poivre")
+lardons=Aliments.objects.get(name="Lardons")
+
+
+
+ratatouille.aliments.add(ail,aubergine,courgette,tomate,sel,poivre,huileOlives,oignon)
+ratatouille.save()
+chouDeBruxellesAuLardons.aliments.add(chouDeBruxelles,echalote,sel,poivre,lardons,muscade,beurre)
+chouDeBruxellesAuLardonssave()
+FricasseePoulet.aliments.add(ail,vermouth,bouquetGarni,paprika,sel,poivre,huileOlives,persil,poulet,lardons,poivron,oignon)
+FricasseePoulet.save()
+pouletOrange.aliments.add(champignon,orange,poivre,sel,herbesDeProvence,poulet,citron,lardons)
+pouletOrange.save()
+epinarCreme.aliments.add(muscade,ail,sel,poivre,epinard,cremeFraiche,beurre)
+epinarCreme.save()
+desDeNavetsBeurre.aliments.add(beurre,sel,poivre,navet,oignon)
+desDeNavetsBeurre.save()
+gratinDeChouFleur.aliments.add(farine,cubeBouillon,sel,poivre,muscade,chouxFleur,beurre,fromageRape,cremeFraiche)
+gratinDeChouFleur.save()
+
+
