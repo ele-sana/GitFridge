@@ -1,3 +1,6 @@
+from django.db.models.manager import RelatedManager
+
+
 pateCarbonara = Recettes(name="Pâtes carbonara")
 pateCarbonara.save()
 chiconGratin = Recettes(name ="Chicon aux gratin")
@@ -68,43 +71,43 @@ hachisParmentier.save()
 
 # les recettes
 pateCarbonara = Recettes.objects.get(name'=Pâtes carbonara")
-pateCarbonara.howTocook('https://www.marmiton.org/recettes/recette_pates-a-la-carbonara_80453.aspx')
+pateCarbonara.howToCook('https://www.marmiton.org/recettes/recette_pates-a-la-carbonara_80453.aspx')
 pateCarbonara.save()
 chiconGratin= Recettes.objects.get(name ="Chicon aux gratin")
-chiconGratin.howTocook("https://www.marmiton.org/recettes/recette_endives-chicons-au-gratin-belgique_27819.aspx")
+chiconGratin.howToCook("https://www.marmiton.org/recettes/recette_endives-chicons-au-gratin-belgique_27819.aspx")
 chiconGratin.save()
 gratinDePateAuJambon = Recettes.objects.get(name ="Gratin de pâtes au jambon")
-gratinDePateAuJambon.howTocook("https://www.marmiton.org/recettes/recette_gratin-de-pates-au-jambon_334460.aspx")
+gratinDePateAuJambon.howToCook("https://www.marmiton.org/recettes/recette_gratin-de-pates-au-jambon_334460.aspx")
 gratinDePateAuJambon.save()
 omeletteCampagnarde = Recettes.objects.get(name ="Omelette forestière")
-omeletteCampagnarde.howTocook("https://www.marmiton.org/recettes/recette_omelette-campagnarde_82950.aspx")
+omeletteCampagnarde.howToCook("https://www.marmiton.org/recettes/recette_omelette-campagnarde_82950.aspx")
 omeletteCampagnarde.save()
 soupeDeHaricotVert = Recettes.objects.get(name ="Soupe de haricots verts")
-soupeDeHaricotVert.howTocook("https://www.marmiton.org/recettes/recette_veloute-d-haricots-verts_41016.aspx")
+soupeDeHaricotVert.howToCook("https://www.marmiton.org/recettes/recette_veloute-d-haricots-verts_41016.aspx")
 soupeDeHaricotVert.save()
 tartiflette = Recettes.objects.get(name ="Tartiflette")
-tartiflette.howTocook("https://www.marmiton.org/recettes/recette_tartiflette-facile_15733.aspx")
+tartiflette.howToCook("https://www.marmiton.org/recettes/recette_tartiflette-facile_15733.aspx")
 tartiflette.save()
 gratindeCourgette = Recettes.objects.get(name ="Gratin de Courgettes")
-gratindeCourgette.howTocook("https://www.marmiton.org/recettes/recette_gratin-de-courgettes-rapide_17071.aspx")
+gratindeCourgette.howToCook("https://www.marmiton.org/recettes/recette_gratin-de-courgettes-rapide_17071.aspx")
 gratindeCourgette.save()
 bouletsALaLiegeoise= Recettes.objects.get(name ="Boulette à la Liégeoise")
-bouletsALaLiegeoise.howTocook("https://www.marmiton.org/recettes/recette_boulets-a-la-liegeoise_32638.aspx")
+bouletsALaLiegeoise.howToCook("https://www.marmiton.org/recettes/recette_boulets-a-la-liegeoise_32638.aspx")
 bouletsALaLiegeoise.save()
 cabillaudEnPapillote = Recettes.objects.get(name ="Cabillaud en papillotes")
-cabillaudEnPapillote.howTocook("https://www.marmiton.org/recettes/recette_filet-de-cabillaud-en-papillote_19058.aspx")
+cabillaudEnPapillote.howToCook("https://www.marmiton.org/recettes/recette_filet-de-cabillaud-en-papillote_19058.aspx")
 cabillaudEnPapillote.save()
 carbonadeFlamande = Recettes.objects.get(name ="Carbonades à la Flamande")
-carbonadeFlamande.howTocook("https://www.marmiton.org/recettes/recette_carbonades-flamandes-traditionnelles_29711.aspx")
+carbonadeFlamande.howToCook("https://www.marmiton.org/recettes/recette_carbonades-flamandes-traditionnelles_29711.aspx")
 carbonadeFlamande.save()
 pouletAigreDoux = Recettes.objects.get(name ="Ooulet aigre-doux")
-pouletAigreDoux.howTocook("https://www.marmiton.org/recettes/recette_poulet-aigre-doux_23788.aspx")
+pouletAigreDoux.howToCook("https://www.marmiton.org/recettes/recette_poulet-aigre-doux_23788.aspx")
 pouletAigreDoux.save()
 tomatesFarcies = Recettes.objects.get(name ="Tomates farcies")
-tomatesFarcies.howTocook("https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx")
+tomatesFarcies.howToCook("https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx")
 tomatesFarcies.save()
 hachisParmentier = Recettes.objects.get(name ="Hachis Parmentier")
-hachisParmentier.howTocook("https://www.marmiton.org/recettes/recette_hachis-parmentier_17639.aspx")
+hachisParmentier.howToCook("https://www.marmiton.org/recettes/recette_hachis-parmentier_17639.aspx")
 hachisParmentier.save()
 
 
@@ -113,5 +116,68 @@ hachisParmentier.save()
 google = Recettes(name="Google")
 google.save()
 google = Recettes.objects.get(name ="Google")
-google.howTocook("https://www.google.be/")
+google.howToCook("https://www.google.be/")
 google.save()
+
+
+
+
+# creations des  recettes
+
+
+
+
+
+
+
+
+.objects.get
+# /lien avec les recettes
+ratatouille=Recettes(name= "ratatouille provençale")
+ratatouille.save()
+ratatouille=Recettes.objects.get(name= "ratatouille provençale")
+ratatouille.picture="https://assets.afcdn.com/recipe/20180412/78543_w768h583c1cx2779cy1994cxb5558cyb3988.webpp"
+ratatouille.howToCook="https://www.marmiton.org/recettes/recette_ratatouille-provencale_80582.aspx"
+ratatouille.save()
+
+chouDeBruxellesAuLardons=Recettes(name="Choux de Bruxelles aux lardons")
+chouDeBruxellesAuLardons.save()
+chouDeBruxellesAuLardons=Recettes.objects.get(name="Choux de Bruxelles aux lardons")
+chouDeBruxellesAuLardons.picture="https://assets.afcdn.com/recipe/20181017/82830_w1200h1600c1cx1752cy2336cxb3504cyb4672.webp"
+chouDeBruxellesAuLardons.howToCook="https://www.marmiton.org/recettes/recette_choux-de-bruxelles-au-lard-en-cocotte_28770.aspx"
+chouDeBruxellesAuLardons.save()
+
+desDeNavetsBeurre=Recettes(name="Dés de navets au beurre")
+desDeNavetsBeurre.save()
+desDeNavetsBeurre=Recettes.objects.get(name="Dés de navets au beurre")
+desDeNavetsBeurre.howToCook=("https://assets.afcdn.com/recipe/20181017/82830_w1200h1600c1cx1752cy2336cxb3504cyb4672.webp")
+desDeNavetsBeurre.picture="https://assets.afcdn.com/recipe/20210112/117145_w768h583c1cx1060cy707cxb2121cyb1414.webp"
+desDeNavetsBeurre.save()
+
+gratinDeChouFleur=Recettes(name="Gratin de Choux-fleur")
+gratinDeChouFleur.save()
+gratinDeChouFleur=Recettes.objects.get(id=29)
+gratinDeChouFleur.picture="https://assets.afcdn.com/recipe/20170112/49501_w1200h1800c1cx2000cy3000.webp"
+gratinDeChouFleur.howToCook="https://assets.afcdn.com/recipe/20210112/117145_w768h583c1cx1060cy707cxb2121cyb1414.webp"
+gratinDeChouFleur.save()
+
+epinarCreme=Recettes(name="Epinards crémeux")
+epinarCreme.save()
+epinarCreme=Recettes.objects.get(name="Epinards crémeux")
+epinarCreme.picture="https://assets.afcdn.com/recipe/20200430/110237_w1200h800c1cx2726cy1817cxb5453cyb3635.webp"
+epinarCreme.howToCook="https://www.marmiton.org/recettes/recette_epinards-cremeux_27147.aspx"
+epinarCreme.save()
+
+pouletOrange=Recettes(name="Poulet à l'orange")
+pouletOrange.save()
+pouletOrange=Recettes.objects.get(name="Poulet à l'orange")
+pouletOrange.picture="https://assets.afcdn.com/recipe/20210304/118355_w768h583c1cx1060cy707cxb2121cyb1414.webp"
+pouletOrange.howToCook="https://www.marmiton.org/recettes/recette_poulet-a-l-orange_12721.aspx"
+pouletOrange.save()
+
+FricasseePoulet=Recettes(name="Fricassée de poulet au paprika et poivrons")
+FricasseePoulet.save()
+FricasseePoulet=Recettes.objects.get(name="Fricassée de poulet au paprika et poivrons")
+FricasseePoulet.picture="https://assets.afcdn.com/recipe/20100120/44027_w768h583c1cx192cy256.webp"
+FricasseePoulet.howToCook="https://www.marmiton.org/recettes/recette_fricasse-de-poulet-au-paprika-et-poivrons_22552.aspx"
+FricasseePoulet.save()
