@@ -15,13 +15,13 @@ def FooDListing(request):
     return render(request,'TemplateFridge/index.html',context)
 
 def RecettesListing(request): 
-    recettes = Recettes.objects.all().order_by("-name")    # template = loader.get_template("TemplateFridge/index.html")
+    recettes = Recettes.objects.all().order_by("name")    # template = loader.get_template("TemplateFridge/index.html")
     # formatedRecettes = ["<ul><li style='text-align:center' type='check-box'>{}</li></ul>".format(recette.name) for recette in recettes]
     context = {'recettes': recettes}
     return render(request,'TemplateFridge/index.html',context)
     
 def HowToCook(request):
-    howToCook = Recettes.objects.all().order_by("-name")
+    howToCook = Recettes.objects.all().order_by("name")
     context = {'howToCook': howToCook }
     return render(request,'TemplateFridge/index.html',context)
 
@@ -54,7 +54,8 @@ def Search(request):
             for query in queries :
                 if query == rAliment.name:
                     alimentNbr+=1
-        name += receipt.name + " : " + str(alimentNbr) + "/" +  str(len(receipt.aliments.all()))       
+                  
+        name += receipt.name + " : " + str(alimentNbr) + " aliments / " +  str(len(receipt.aliments.all())) +  " nécessaires ......     "       
         if alimentNbr == len(receipt.aliments.all()):
             recettesQueJePeuxFaire.append(receipt)
             
